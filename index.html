@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style type="text/css">
+    	body {
+    		background: #7c7c7c;
+    	}
+    </style>
+</head>
+
+<body>
+    <input type="text" name="cpicker" id="cpicker" class="cpicker">
+    <script type="text/javascript">
+    $( ".cpicker" ).spectrum( {
+        color: '#666666',
+        showInput: true,
+        showInitial: true,
+        allowEmpty: false,
+        showButtons: false,
+        showPalette: false,
+        showPaletteOnly: false,
+        togglePaletteOnly: false,
+        preferredFormat: "HEX",
+        showSelectionPalette: false,
+        move: function( color ) {
+            color = color.toHexString( ).replace('#','0x');
+            console.log( this, color ); // #ff0000
+        }
+    } );
+    </script>
+</body>
+
+</html>
